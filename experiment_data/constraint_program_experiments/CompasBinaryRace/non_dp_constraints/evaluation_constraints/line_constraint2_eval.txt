@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    ENFORCE: ROW CONSTRAINT: 
+        priors_count <= 1;
+
+END;

@@ -1,0 +1,7 @@
+SYNTHESIZE: Adult;
+
+    # obfuscate the gender information
+    MINIMIZE: UTILITY: PARAM <param1>:
+        DOWNSTREAM_ACCUARCY(features=all, target=sex);
+
+END;

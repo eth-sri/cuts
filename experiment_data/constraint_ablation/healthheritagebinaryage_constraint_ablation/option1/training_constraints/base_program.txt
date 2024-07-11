@@ -1,0 +1,4 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+END;

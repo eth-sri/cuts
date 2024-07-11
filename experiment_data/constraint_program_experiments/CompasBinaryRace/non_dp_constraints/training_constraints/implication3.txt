@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        priors_count > 2 OR diff_jail > 200000 IMPLIES c_charge_degree == M;
+
+END;

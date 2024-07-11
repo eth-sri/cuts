@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        STD[no_Claims] < E[no_Claims] / 2;
+
+END;

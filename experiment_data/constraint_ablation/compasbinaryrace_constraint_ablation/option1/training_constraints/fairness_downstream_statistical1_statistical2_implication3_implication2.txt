@@ -1,0 +1,18 @@
+SYNTHESIZE: CompasBinaryRace;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=race, target=two_year_recid, lr=0.1, n_epochs=15, batch_size=256);
+
+    ENFORCE: STATISTICAL: PARAM <param2>:
+        E[age] == 40;
+
+    ENFORCE: STATISTICAL: PARAM <param3>:
+        (E[sex * two_year_recid] - E[sex] * E[two_year_recid]) / (STD[sex] * STD[two_year_recid] + 0.00001) == 0;
+
+    ENFORCE: IMPLICATION: PARAM <param4>:
+        priors_count > 2 OR diff_jail > 200000 IMPLIES c_charge_degree == M;
+
+    ENFORCE: IMPLICATION: PARAM <param5>:
+        c_charge_degree == F AND v_score_text == Low IMPLIES diff_jail <= 75000;
+
+END;

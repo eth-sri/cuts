@@ -1,0 +1,10 @@
+SYNTHESIZE: Adult;
+
+    # TODO: the scaling is not needed here, remove that
+    ENFORCE: STATISTICAL:
+        0.5 * E[age|sex==Male] >= 0.5 * E[age|sex==Female] AND 0.5 * E[age|sex==Male] <= 0.5 * E[age|sex==Female];
+    
+    MAXIMIZE: STATISTICAL:
+        E[age|sex==Male] - E[age|sex==Female];
+
+END;

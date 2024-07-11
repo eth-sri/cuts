@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[age|sex==Male] == E[age|sex==Female];
+
+END;

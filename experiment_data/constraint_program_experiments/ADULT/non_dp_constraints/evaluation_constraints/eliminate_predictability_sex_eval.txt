@@ -1,0 +1,11 @@
+SYNTHESIZE: Adult;
+
+    # test how predictable gender has remained
+    MINIMIZE: UTILITY:
+        DOWNSTREAM_ACCUARCY(features=all, target=sex);
+    
+    # test the impact on fairness
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary);
+
+END;

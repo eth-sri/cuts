@@ -1,0 +1,12 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[age] == 30;
+
+    ENFORCE: STATISTICAL: PARAM <param2>:
+        E[age|sex==Male] == E[age|sex==Female];
+
+    ENFORCE: IMPLICATION: PARAM <param3>:
+        workclass in {Federal-gov, Local-gov, State-gov} IMPLIES education in {Bachelors, Some-college, Masters, Doctorate};
+        
+END;

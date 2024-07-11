@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    MAXIMIZE: STATISTICAL:
+        E[age];
+        
+END;

@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    MINIMIZE: STATISTICAL: 
+        (E[sex * two_year_recid] - E[sex] * E[two_year_recid]) / (STD[sex] * STD[two_year_recid] + 0.00001);
+
+END;

@@ -1,0 +1,6 @@
+SYNTHESIZE: CompasBinaryRace;
+
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=race, target=two_year_recid, lr=0.1, n_epochs=15, batch_size=256);
+    
+END;

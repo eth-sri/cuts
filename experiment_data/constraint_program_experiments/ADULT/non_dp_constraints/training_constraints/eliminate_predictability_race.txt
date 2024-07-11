@@ -1,0 +1,7 @@
+SYNTHESIZE: Adult;
+    
+    # try to eliminate the predictability of the race feature
+    MINIMIZE: UTILITY: PARAM <param1>:
+        DOWNSTREAM_ACCUARCY(features=all, target=race, lr=0.01);
+
+END;

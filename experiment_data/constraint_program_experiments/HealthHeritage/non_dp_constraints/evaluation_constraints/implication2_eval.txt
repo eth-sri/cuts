@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: IMPLICATION: 
+        PrimaryConditionGroup == PRGNCY IMPLIES Sex == F;
+
+END;

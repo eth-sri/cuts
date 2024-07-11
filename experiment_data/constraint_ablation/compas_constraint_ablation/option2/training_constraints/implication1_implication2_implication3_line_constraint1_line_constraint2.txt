@@ -1,0 +1,19 @@
+
+SYNTHESIZE: Compas;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        age < 30 IMPLIES priors_count <= 1;
+
+    ENFORCE: IMPLICATION: PARAM <param2>:
+        c_charge_degree == F AND v_score_text == Low IMPLIES diff_jail <= 75000;
+
+    ENFORCE: IMPLICATION: PARAM <param3>:
+        priors_count > 2 OR diff_jail > 200000 IMPLIES c_charge_degree == M;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param4>:
+        age < 30;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param5>:
+        priors_count <= 1;
+
+END;

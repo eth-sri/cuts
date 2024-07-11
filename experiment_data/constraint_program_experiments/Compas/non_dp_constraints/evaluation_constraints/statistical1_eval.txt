@@ -1,0 +1,7 @@
+
+SYNTHESIZE: Compas;
+
+    MINIMIZE: STATISTICAL: 
+        E[age];
+
+END;

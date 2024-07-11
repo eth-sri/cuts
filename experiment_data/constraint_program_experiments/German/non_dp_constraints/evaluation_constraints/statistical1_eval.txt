@@ -1,0 +1,7 @@
+
+SYNTHESIZE: German;
+
+    MINIMIZE: STATISTICAL: 
+        E[A13];
+
+END;

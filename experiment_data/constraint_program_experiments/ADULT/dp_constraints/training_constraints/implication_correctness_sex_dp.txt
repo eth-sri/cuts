@@ -1,0 +1,15 @@
+SYNTHESIZE: Adult;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+        
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        relationship == Wife IMPLIES sex == Female;
+    
+    ENFORCE: IMPLICATION: PARAM <param2>:
+        relationship == Husband IMPLIES sex == Male;
+    
+    ENFORCE: IMPLICATION: PARAM <param3>:
+        marital-status in {Divorced, Never-married} IMPLIES relationship not in {Husband, Wife};
+    
+END;

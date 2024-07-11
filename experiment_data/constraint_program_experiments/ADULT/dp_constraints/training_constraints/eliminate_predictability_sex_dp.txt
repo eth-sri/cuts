@@ -1,0 +1,10 @@
+SYNTHESIZE: Adult;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+        
+    # obfuscate the gender information
+    MINIMIZE: UTILITY: PARAM <param1>:
+        DOWNSTREAM_ACCUARCY(features=all, target=sex);
+
+END;

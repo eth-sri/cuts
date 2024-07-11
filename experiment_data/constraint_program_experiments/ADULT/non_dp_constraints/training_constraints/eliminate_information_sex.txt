@@ -1,0 +1,21 @@
+# make the information about sex absolutely useless
+SYNTHESIZE: Adult;
+
+    MINIMIZE: UTILITY: PARAM <param1>:
+        DOWNSTREAM_ACCUARCY(features=all, target=sex);
+    
+    MAXIMIZE: STATISTICAL: PARAM <param2>:
+        H[sex];
+    
+    ENFORCE: STATISTICAL: PARAM <param3>:
+        E[workclass|sex==Female] == E[workclass|sex==Male] AND E[education|sex==Female] == E[education|sex==Male] 
+            AND E[occupation|sex==Female] == E[occupation|sex==Male] AND E[salary|sex==Female] == E[salary|sex==Male];
+    
+    MINIMIZE: UTILITY: PARAM <param4>:
+        DOWNSTREAM_ACCUARCY(features=[sex, marital-status, relationship], target=salary);
+
+    # covariance
+    MINIMIZE: STATISTICAL: PARAM <param5>:
+        E[sex * salary] - E[sex] * E[salary];  # probably this should have its own primitve
+
+END;

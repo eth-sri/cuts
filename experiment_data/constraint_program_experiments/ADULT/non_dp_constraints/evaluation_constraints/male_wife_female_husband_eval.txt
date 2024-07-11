@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: IMPLICATION:
+        sex == Male IMPLIES relationship == Wife;
+    
+    ENFORCE: IMPLICATION:
+        sex == Female IMPLIES relationship == Husband;
+
+END;

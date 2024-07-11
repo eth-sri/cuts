@@ -1,0 +1,24 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[age] == 30;
+
+    ENFORCE: STATISTICAL: PARAM <param2>:
+        E[age|sex==Male] == E[age|sex==Female];
+
+    ENFORCE: IMPLICATION: PARAM <param3>:
+        workclass in {Federal-gov, Local-gov, State-gov} IMPLIES education in {Bachelors, Some-college, Masters, Doctorate};
+
+    ENFORCE: IMPLICATION: PARAM <param4>:
+        marital-status in {Divorced, Never-married} IMPLIES relationship not in {Husband, Wife};
+    
+    ENFORCE: STATISTICAL: PARAM <param5>:
+        (E[sex * salary] - E[sex] * E[salary]) / (STD[sex] * STD[salary] + 0.00001) == 0;
+    
+    ENFORCE: ROW CONSTRAINT: PARAM <param6>:
+        age > 35 AND age < 55;
+    
+    ENFORCE: IMPLICATION: PARAM <param7>:
+        marital-status == Widowed OR relationship == Wife IMPLIES sex == Female;
+        
+END;

@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    ENFORCE: ROW CONSTRAINT: 
+        age < 30;
+
+END;

@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: IMPLICATION:
+        sex == Male IMPLIES workclass != Private;
+    
+    ENFORCE: IMPLICATION:
+        sex == Male IMPLIES workclass == Private;
+
+END;

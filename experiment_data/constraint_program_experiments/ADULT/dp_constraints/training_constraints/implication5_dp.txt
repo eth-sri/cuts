@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+      
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+        
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        workclass in {Federal-gov, Local-gov, State-gov} IMPLIES education in {Bachelors, Some-college, Masters, Doctorate};
+    
+END;

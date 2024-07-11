@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        LabCount_total > 5 IMPLIES ProcedureGroup == MED;
+
+END;

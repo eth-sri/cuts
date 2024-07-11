@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    MINIMIZE: STATISTICAL: 
+        E[age];
+
+END;

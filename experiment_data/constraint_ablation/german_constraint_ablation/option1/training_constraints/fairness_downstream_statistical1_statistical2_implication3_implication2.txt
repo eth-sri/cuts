@@ -1,0 +1,18 @@
+SYNTHESIZE: German;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=A20, target=class, lr=0.1, n_epochs=15, batch_size=256);
+
+    ENFORCE: STATISTICAL: PARAM <param2>:
+        E[A13] == 40;
+
+    ENFORCE: STATISTICAL: PARAM <param3>:
+        (E[A20 * A17] - E[A20] * E[A17]) / (STD[A20] * STD[A17] + 0.00001) == 0;
+
+    ENFORCE: IMPLICATION: PARAM <param4>:
+        A12 == A121 AND A13 < 40 IMPLIES A9 == A91;
+
+    ENFORCE: IMPLICATION: PARAM <param5>:
+        A15 in {A151, A153} IMPLIES A17 == A173;
+
+END;

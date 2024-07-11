@@ -1,0 +1,6 @@
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[max_CharlsonIndex|Sex==F] == E[max_CharlsonIndex|Sex==M];
+
+END;

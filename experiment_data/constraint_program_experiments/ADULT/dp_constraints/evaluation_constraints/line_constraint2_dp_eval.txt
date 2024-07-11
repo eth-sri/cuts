@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: ROW CONSTRAINT:
+        age > 35 AND age < 55;
+    
+END;

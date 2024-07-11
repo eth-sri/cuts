@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: ROW CONSTRAINT: 
+        Specialty == Other;
+
+END;

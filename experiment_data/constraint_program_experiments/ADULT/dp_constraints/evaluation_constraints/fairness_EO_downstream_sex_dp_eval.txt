@@ -1,0 +1,10 @@
+
+SYNTHESIZE: ADULT;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    MINIMIZE: BIAS: 
+        EQUALIZED_ODDS(protected=sex, target=salary, lr=0.1, n_epochs=15, batch_size=256);
+        
+END;

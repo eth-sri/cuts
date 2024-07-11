@@ -1,0 +1,3 @@
+SYNTHESIZE: Adult;
+        
+END;

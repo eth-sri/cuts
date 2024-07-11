@@ -1,0 +1,15 @@
+SYNTHESIZE: Adult;
+
+    MAXIMIZE: STATISTICAL:
+        E[age];
+
+    MAXIMIZE: STATISTICAL:
+        E[age|sex==Male] - E[age|sex==Female];
+
+    ENFORCE: IMPLICATION:
+        workclass in {Federal-gov, Local-gov, State-gov} IMPLIES education in {Bachelors, Some-college, Masters, Doctorate};
+
+    ENFORCE: IMPLICATION:
+        marital-status in {Divorced, Never-married} IMPLIES relationship not in {Husband, Wife};
+        
+END;

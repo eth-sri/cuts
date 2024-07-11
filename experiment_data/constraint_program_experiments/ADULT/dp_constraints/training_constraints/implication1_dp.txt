@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+      
+      ENSURE: DIFFERENTIAL PRIVACY:
+            EPSILON=<epsilon>, DELTA=1e-9;
+        
+      ENFORCE: IMPLICATION: PARAM <param1>:
+            native_country != United_States IMPLIES occupation in {Tech_support, Sales, Craft_repair, Farming_fishing};
+
+END;

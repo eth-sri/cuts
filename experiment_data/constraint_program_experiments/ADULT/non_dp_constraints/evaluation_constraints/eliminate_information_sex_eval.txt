@@ -1,0 +1,23 @@
+# make the information about sex absolutely useless
+SYNTHESIZE: Adult;
+
+    MINIMIZE: UTILITY:
+        DOWNSTREAM_ACCUARCY(features=all, target=sex);
+    
+    MAXIMIZE: STATISTICAL:
+        H[sex];
+    
+    ENFORCE: STATISTICAL:
+        E[workclass|sex==Female] == E[workclass|sex==Male] AND E[education|sex==Female] == E[education|sex==Male] 
+            AND E[occupation|sex==Female] == E[occupation|sex==Male] AND E[salary|sex==Female] == E[salary|sex==Male];
+    
+    MINIMIZE: UTILITY:
+        DOWNSTREAM_ACCUARCY(features=[sex, marital-status, relationship], target=salary);
+    
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary);
+
+    MINIMIZE: STATISTICAL:
+        E[sex * salary] - E[sex] * E[salary];
+
+END;

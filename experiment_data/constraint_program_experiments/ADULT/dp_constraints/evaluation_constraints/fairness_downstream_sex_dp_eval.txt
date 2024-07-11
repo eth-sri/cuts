@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+        
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary);
+
+END;

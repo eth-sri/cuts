@@ -1,0 +1,10 @@
+
+SYNTHESIZE: German;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    MINIMIZE: STATISTICAL: 
+        (E[A20 * A17] - E[A20] * E[A17]) / (STD[A20] * STD[A17] + 0.00001);
+
+END;

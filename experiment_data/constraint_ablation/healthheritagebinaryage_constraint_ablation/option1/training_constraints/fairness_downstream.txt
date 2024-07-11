@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=AgeAtFirstClaim, target=max_CharlsonIndex, lr=0.1, n_epochs=15, batch_size=256);
+
+END;

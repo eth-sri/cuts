@@ -1,0 +1,7 @@
+
+SYNTHESIZE: Compas;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[age] == 40;
+
+END;

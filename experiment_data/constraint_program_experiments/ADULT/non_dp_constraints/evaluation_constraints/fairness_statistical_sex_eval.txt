@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+    
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary);
+    
+    ENFORCE: STATISTICAL:
+        E[salary|sex==Male] == E[salary|sex==Female];
+        
+END;

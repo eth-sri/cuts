@@ -1,0 +1,6 @@
+SYNTHESIZE: HealthHeritage;
+
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=Sex, target=max_CharlsonIndex);
+    
+END;

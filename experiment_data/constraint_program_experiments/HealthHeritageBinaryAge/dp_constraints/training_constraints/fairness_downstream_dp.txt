@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=AgeAtFirstClaim, target=max_CharlsonIndex, lr=0.1, n_epochs=15, batch_size=64);
+
+END;

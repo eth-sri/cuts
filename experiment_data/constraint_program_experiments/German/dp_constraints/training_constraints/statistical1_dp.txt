@@ -1,0 +1,10 @@
+
+SYNTHESIZE: German;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[A13] == 40;
+
+END;

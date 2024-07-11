@@ -1,0 +1,7 @@
+
+SYNTHESIZE: German;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[A13] == 40;
+
+END;

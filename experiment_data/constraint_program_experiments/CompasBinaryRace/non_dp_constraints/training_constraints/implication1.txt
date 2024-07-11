@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        age < 30 IMPLIES priors_count <= 1;
+
+END;

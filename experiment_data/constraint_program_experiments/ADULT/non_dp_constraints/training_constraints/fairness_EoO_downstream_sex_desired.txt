@@ -1,0 +1,7 @@
+
+SYNTHESIZE: ADULT;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        EQUALITY_OF_OPPORTUNITY(protected=sex, target=salary, desired_outcome=>50K, lr=0.1, n_epochs=15, batch_size=256);
+        
+END;

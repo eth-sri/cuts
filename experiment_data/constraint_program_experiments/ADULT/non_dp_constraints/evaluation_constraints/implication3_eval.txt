@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+    
+    ENFORCE: IMPLICATION:
+        workclass == Private OR sex == Female IMPLIES race == White;
+
+END;

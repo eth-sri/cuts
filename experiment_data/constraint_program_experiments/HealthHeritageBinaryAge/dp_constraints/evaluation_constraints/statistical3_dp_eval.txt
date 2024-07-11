@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    MINIMIZE: STATISTICAL: 
+        STD[no_Claims] - E[no_Claims] / 2;
+
+END;

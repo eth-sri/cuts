@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        Specialty == Other;
+
+END;

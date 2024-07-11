@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        PrimaryConditionGroup == PRGNCY IMPLIES Sex == F;
+
+END;

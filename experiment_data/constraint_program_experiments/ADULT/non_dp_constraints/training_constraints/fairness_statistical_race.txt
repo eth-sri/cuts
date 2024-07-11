@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+    
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[salary|race==White] == E[salary|race==Black];
+
+END;

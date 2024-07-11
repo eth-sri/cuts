@@ -1,0 +1,10 @@
+SYNTHESIZE: Adult;
+
+    MINIMIZE: STATISTICAL:
+        # correlation here instead of covariance, as it is more interpetable
+        (E[sex * salary] - E[sex] * E[salary]) / (STD[sex] * STD[salary] + 0.00001);
+    
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary);
+
+END;

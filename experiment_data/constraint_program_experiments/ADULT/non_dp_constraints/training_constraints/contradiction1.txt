@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        sex == Male IMPLIES workclass != Private;
+    
+    ENFORCE: IMPLICATION: PARAM <param2>:
+        sex == Male IMPLIES workclass == Private;
+
+END;

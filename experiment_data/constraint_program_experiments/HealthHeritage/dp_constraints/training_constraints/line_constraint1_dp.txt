@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritage;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        Sex in {F, M};
+
+END;

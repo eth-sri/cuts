@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENFORCE: IMPLICATION: 
+        LabCount_total > 5 IMPLIES ProcedureGroup == MED;
+
+END;

@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        sex == Female;
+    
+END;

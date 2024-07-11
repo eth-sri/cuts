@@ -1,0 +1,7 @@
+
+SYNTHESIZE: Compas;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        age < 30;
+
+END;

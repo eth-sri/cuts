@@ -1,0 +1,10 @@
+
+SYNTHESIZE: Compas;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        (E[sex * two_year_recid] - E[sex] * E[two_year_recid]) / (STD[sex] * STD[two_year_recid] + 0.00001) == 0;
+
+END;

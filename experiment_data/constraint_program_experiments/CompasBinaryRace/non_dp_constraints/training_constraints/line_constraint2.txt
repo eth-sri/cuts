@@ -1,0 +1,7 @@
+
+SYNTHESIZE: CompasBinaryRace;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        priors_count <= 1;
+
+END;

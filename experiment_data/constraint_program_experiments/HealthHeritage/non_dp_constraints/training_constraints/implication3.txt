@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        LabCount_total > 5 IMPLIES ProcedureGroup == MED;
+
+END;

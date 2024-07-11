@@ -1,0 +1,6 @@
+SYNTHESIZE: HealthHeritage;
+
+    MAXIMIZE: STATISTICAL: PARAM <param1>:
+        H[PrimaryConditionGroup];
+
+END;

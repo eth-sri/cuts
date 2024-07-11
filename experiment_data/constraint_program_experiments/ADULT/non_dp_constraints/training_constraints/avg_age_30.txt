@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        E[age] == 30;
+
+END;

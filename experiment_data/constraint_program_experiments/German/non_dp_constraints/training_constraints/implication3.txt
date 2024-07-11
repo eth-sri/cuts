@@ -1,0 +1,7 @@
+
+SYNTHESIZE: German;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        A12 == A121 AND A13 < 40 IMPLIES A9 == A91;
+
+END;

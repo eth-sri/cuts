@@ -1,0 +1,9 @@
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: STATISTICAL:
+        E[max_CharlsonIndex|Sex==F] == E[max_CharlsonIndex|Sex==M];
+
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=Sex, target=max_CharlsonIndex);
+
+END;

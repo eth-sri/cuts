@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        age > 35 AND age < 55;
+    
+END;

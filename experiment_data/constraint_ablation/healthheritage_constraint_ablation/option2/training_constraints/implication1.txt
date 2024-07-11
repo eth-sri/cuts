@@ -1,0 +1,6 @@
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        PrimaryConditionGroup in {SEPSIS, STROKE, HEART2, HEART4, INFEC4} IMPLIES Specialty == Emergency;
+
+END;

@@ -1,0 +1,6 @@
+SYNTHESIZE: HealthHeritage;
+
+    MINIMIZE: UTILITY:
+        DOWNSTREAM_ACCURACY(features=all, target=Sex);
+    
+END;

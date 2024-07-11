@@ -1,0 +1,12 @@
+SYNTHESIZE: Adult;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    # minimize the covariance between the two features
+    # obviously, covariance is not the best measure here as it assumes ordinal relationships
+    # however, given that both features are binary this is not a problem in this case
+    ENFORCE: STATISTICAL: PARAM <param1>:
+        (E[sex * salary] - E[sex] * E[salary]) / (STD[sex] * STD[salary] + 0.00001) == 0;
+
+END;

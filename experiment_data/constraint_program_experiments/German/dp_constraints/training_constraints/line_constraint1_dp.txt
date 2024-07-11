@@ -1,0 +1,10 @@
+
+SYNTHESIZE: German;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: ROW CONSTRAINT: PARAM <param1>:
+        A13 > 30 AND A13 < 50;
+
+END;

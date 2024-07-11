@@ -1,0 +1,6 @@
+SYNTHESIZE: German;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=A20, target=class, lr=0.1, n_epochs=15, batch_size=256);
+
+END;

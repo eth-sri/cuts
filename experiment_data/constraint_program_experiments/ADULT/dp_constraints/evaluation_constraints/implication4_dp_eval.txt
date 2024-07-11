@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+      
+    ENFORCE: IMPLICATION:
+        marital-status in {Divorced, Never-married} IMPLIES relationship not in {Husband, Wife};
+    
+END;

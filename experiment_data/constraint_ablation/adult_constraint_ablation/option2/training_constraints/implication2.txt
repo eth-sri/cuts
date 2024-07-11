@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+      
+      ENFORCE: IMPLICATION: PARAM <param1>:
+            marital-status == Widowed OR relationship == Wife IMPLIES sex == Female;
+
+END;

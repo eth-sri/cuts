@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritage;
+
+    MINIMIZE: STATISTICAL: 
+        E[LabCount_total / max(no_Claims, 1)];
+
+END;

@@ -1,0 +1,7 @@
+
+SYNTHESIZE: German;
+
+    ENFORCE: ROW CONSTRAINT: 
+        A15 not in {A151, A153} AND A6 != A61;
+
+END;

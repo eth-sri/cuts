@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    MAXIMIZE: STATISTICAL:
+        E[age];
+
+    MAXIMIZE: STATISTICAL:
+        E[age|sex==Male] - E[age|sex==Female];
+        
+END;

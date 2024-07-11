@@ -1,0 +1,18 @@
+SYNTHESIZE: Adult;
+
+    MINIMIZE: BIAS: PARAM <param1>:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary, lr=0.1, n_epochs=15, batch_size=256);
+
+    ENFORCE: STATISTICAL: PARAM <param2>:
+        E[age] == 30;
+
+    ENFORCE: STATISTICAL: PARAM <param3>:
+        E[age|sex==Male] == E[age|sex==Female];
+
+    ENFORCE: IMPLICATION: PARAM <param4>:
+        workclass in {Federal-gov, Local-gov, State-gov} IMPLIES education in {Bachelors, Some-college, Masters, Doctorate};
+
+    ENFORCE: IMPLICATION: PARAM <param5>:
+        marital-status in {Divorced, Never-married} IMPLIES relationship not in {Husband, Wife};
+        
+END;

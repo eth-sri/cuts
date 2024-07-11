@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        sex == Male IMPLIES relationship == Wife;
+    
+    ENFORCE: IMPLICATION: PARAM <param2>:
+        sex == Female IMPLIES relationship == Husband;
+
+END;

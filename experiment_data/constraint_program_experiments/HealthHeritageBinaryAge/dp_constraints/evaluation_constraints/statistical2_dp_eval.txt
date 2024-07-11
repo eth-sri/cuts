@@ -1,0 +1,10 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    MINIMIZE: STATISTICAL: 
+        E[LabCount_total / max(no_Claims, 1)];
+
+END;

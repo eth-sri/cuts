@@ -1,0 +1,10 @@
+
+SYNTHESIZE: German;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: IMPLICATION: 
+        A15 in {A151, A153} IMPLIES A17 == A173;
+
+END;

@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+      
+      ENFORCE: IMPLICATION: PARAM <param1>:
+            native_country != United_States IMPLIES occupation in {Tech_support, Sales, Craft_repair, Farming_fishing};
+
+END;

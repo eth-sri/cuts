@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+    
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+        
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        workclass == Private OR sex == Female IMPLIES race == White;
+
+END;

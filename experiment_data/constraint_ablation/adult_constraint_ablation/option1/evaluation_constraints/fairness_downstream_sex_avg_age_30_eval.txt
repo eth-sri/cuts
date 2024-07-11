@@ -1,0 +1,9 @@
+SYNTHESIZE: Adult;
+
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=sex, target=salary, lr=0.1, n_epochs=15, batch_size=256);
+
+    MAXIMIZE: STATISTICAL:
+        E[age];
+        
+END;

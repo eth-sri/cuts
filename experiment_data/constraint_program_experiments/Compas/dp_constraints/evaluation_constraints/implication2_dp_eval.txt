@@ -1,0 +1,10 @@
+
+SYNTHESIZE: Compas;
+
+    ENSURE: DIFFERENTIAL PRIVACY:
+        EPSILON=<epsilon>, DELTA=1e-9;
+
+    ENFORCE: IMPLICATION: 
+        c_charge_degree == F AND v_score_text == Low IMPLIES diff_jail <= 75000;
+
+END;

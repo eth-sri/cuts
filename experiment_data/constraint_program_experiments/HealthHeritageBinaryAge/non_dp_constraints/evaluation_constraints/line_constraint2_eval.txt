@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENFORCE: ROW CONSTRAINT: 
+        Specialty == Other;
+
+END;

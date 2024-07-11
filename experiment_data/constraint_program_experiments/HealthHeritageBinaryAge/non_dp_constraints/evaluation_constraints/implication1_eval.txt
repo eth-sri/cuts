@@ -1,0 +1,7 @@
+
+SYNTHESIZE: HealthHeritageBinaryAge;
+
+    ENFORCE: IMPLICATION: 
+        PrimaryConditionGroup in {SEPSIS, STROKE, HEART2, HEART4, INFEC4} IMPLIES Specialty == Emergency;
+
+END;

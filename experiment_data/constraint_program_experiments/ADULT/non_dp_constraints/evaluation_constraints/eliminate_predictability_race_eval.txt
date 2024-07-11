@@ -1,0 +1,11 @@
+SYNTHESIZE: Adult;
+    
+    # check how easy is it to predict the race now
+    MINIMIZE: UTILITY:
+        DOWNSTREAM_ACCUARCY(features=all, target=race);
+    
+    # check what impact this had on fairness
+    MINIMIZE: BIAS:
+        DEMOGRAPHIC_PARITY(protected=race, target=salary); 
+
+END;

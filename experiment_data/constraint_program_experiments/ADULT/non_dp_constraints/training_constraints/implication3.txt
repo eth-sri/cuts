@@ -1,0 +1,6 @@
+SYNTHESIZE: Adult;
+    
+    ENFORCE: IMPLICATION: PARAM <param1>:
+        workclass == Private OR sex == Female IMPLIES race == White;
+
+END;

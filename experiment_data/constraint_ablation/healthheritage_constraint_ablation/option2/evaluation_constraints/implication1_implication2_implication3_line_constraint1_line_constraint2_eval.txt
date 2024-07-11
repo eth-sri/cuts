@@ -1,0 +1,18 @@
+SYNTHESIZE: HealthHeritage;
+
+    ENFORCE: IMPLICATION:
+        PrimaryConditionGroup in {SEPSIS, STROKE, HEART2, HEART4, INFEC4} IMPLIES Specialty == Emergency;
+
+    ENFORCE: IMPLICATION:
+        PrimaryConditionGroup == PRGNCY IMPLIES Sex == F;
+
+    ENFORCE: IMPLICATION:
+        LabCount_total > 5 IMPLIES ProcedureGroup == MED;
+
+    ENFORCE: ROW CONSTRAINT:
+        Sex in {F, M};
+
+    ENFORCE: ROW CONSTRAINT:
+        Specialty == Other;
+
+END;
