@@ -4,7 +4,7 @@ from programmable_synthesizer import CuTS
 program = '''
 SYNTHESIZE: Adult;
 
-    MINIMIZE: STATISTICAL:  
+    ENFORCE: STATISTICAL:  
         E[age|age > 30] == 40;
     
 END;
