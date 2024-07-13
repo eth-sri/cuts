@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 import torch
 import time
-from programmable_synthesizer import CuTS
+from customizable_synthesizer import CuTS
 from itertools import product
 from utils import evaluate_sampled_dataset, statistics, Timer
 from constraints import ConstraintEvaluator

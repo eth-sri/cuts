@@ -21,7 +21,7 @@ conda activate cuts
 We provide a minimal example of a CuTS synthetization, executable by running the provided `example.py` script.
 
 ```python
-from programmable_synthesizer import CuTS
+from customizable_synthesizer import CuTS
 
 
 program = '''

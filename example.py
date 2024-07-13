@@ -1,4 +1,4 @@
-from programmable_synthesizer import CuTS
+from customizable_synthesizer import CuTS
 
 
 program = '''

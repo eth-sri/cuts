@@ -42,7 +42,7 @@ class CuTS:
         else:
             self.dataset = available_datasets[dataset_name.lower()](device=self.device)
 
-        self.path = f'experiment_data/programmable_synthesizer_experiments/{dataset_name.lower()}/trained_models' if path is None else path
+        self.path = f'experiment_data/customizable_synthesizer_experiments/{dataset_name.lower()}/trained_models' if path is None else path
 
         # get the marginal combinations in the workload
         workload_dim = 3 if self.workload == 'all_three_with_labels' else self.workload
