@@ -128,7 +128,7 @@ def main(args):
     else:
         if args.dataset == 'ADULT':
             programs_and_params = {
-                f'fairness_downstream_sex_dp.txt': {'arguments': {'param1': [0.0007]}},
+                f'fairness_downstream_sex_dp.txt': {'arguments': {'param1': [0.0007]}, 'denoiser_config': {'finetuning_epochs': 200}},
                 f'implication2{additional_string}.txt': {'arguments': {'param1': [0.00005]}, 'denoiser_config': {'finetuning_epochs': 200}},
                 f'implication4{additional_string}.txt': {'arguments': {'param1': [0.0000125]}, 'denoiser_config': {'finetuning_epochs': 200}},
                 f'implication5{additional_string}.txt': {'arguments': {'param1': [0.000375]}, 'denoiser_config': {'finetuning_epochs': 200}},
