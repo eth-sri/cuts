@@ -339,7 +339,7 @@ class ConstraintEvaluator:
         # avoid encoding error
         y_train = ConstraintEvaluator.handle_missing_classes_in_training_data(y_train, self.dataset.features[parsed_utility_command['kwargs']['target']])
         
-        classifier = XGBClassifier(verbosity=0, random_state=self.xgb_random_state)
+        classifier = self._get_classifier(classifier_name)
         classifier.fit(X_train.cpu().numpy(), y_train.cpu().numpy().astype(int))
         prediction = classifier.predict(X_eval.cpu().numpy())
 
@@ -364,7 +364,6 @@ class ConstraintEvaluator:
         bias_scores = []
         for classifier_name in self.chosen_classifiers:
         
-            # classifier = XGBClassifier(verbosity=0, random_state=self.xgb_random_state)
             classifier = self._get_classifier(classifier_name)
             classifier.fit(X_train.cpu().numpy(), y_train.cpu().numpy().astype(int))
             prediction = classifier.predict(X_eval.cpu().numpy())
