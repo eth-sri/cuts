@@ -62,6 +62,9 @@ Each of the above setups can be also run with the flag `--baseline_mode`, where 
 
 Note that on the first execution at specific privacy level on a given dataset, the backbone model is trained. This may take up to a few hours. However, afterwards, this backbone is saved, and any other experiments on the same dataset and privacy level will load and fine tune this model, not retraining it, saving considerable computation time. Note that a slight random difference in the backbone model may cause your results to non-significantly deviate from the ones presented in the paper.
 
+**[17.03.2025] Update**
+The backbones used in the paper are now available for download [here](https://files.sri.inf.ethz.ch/cuts/). Please place the whole folder under `experiment_data`.
+
 All experimental results are saved in `.npy` files in the folder `experiment_data`, and include 6 metrics (three statistical similarity metrics and 3 downstream classifier performance metrics). The layout of the `.npy` tensor can be inspected in the corresponding experimental scripts. To reproduce the results shown in the paper, average over the `sample` and `resample` dimensions of the mean results for each metric.
 
 ## Citation
